@@ -1,4 +1,3 @@
-//! Basic Server
 const express = require("express");
 const http = require('http')
 const app = express()
@@ -8,7 +7,6 @@ app.get('/', (req, res) => {
 })
 server.on('request', app)
 server.listen(3000, () => console.log('server runnig'))
-//! Web Socket
 const WebSocketServer = require('ws').Server
 const wss = new WebSocketServer({ server: server })
 wss.on('connection', function connection(ws) {
